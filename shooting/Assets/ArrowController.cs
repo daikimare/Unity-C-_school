@@ -18,7 +18,7 @@ public class ArrowController : MonoBehaviour
     public void Shoot(Vector3 dir) {
         GetComponent<Rigidbody>().AddForce(dir);
     }
-    public void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) {
         GetComponent<Rigidbody>().isKinematic = true;
     }
 }

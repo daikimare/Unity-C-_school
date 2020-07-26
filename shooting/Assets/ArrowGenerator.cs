@@ -14,7 +14,9 @@ public class ArrowGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject arrow = Instantiate(arrowPrefab) as GameObject;
-        arrow.GetComponent<ArrowController>().Shoot(new Vector3(0,200,2000));
+        if (Input.GetMouseButtonDown(0)) {
+            GameObject arrow = Instantiate(arrowPrefab) as GameObject;
+            arrow.GetComponent<ArrowController>().Shoot(new Vector3(-60000,0,0));
+        }
     }
 }
