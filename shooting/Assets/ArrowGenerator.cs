@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowGenerator : MonoBehaviour
 {
-    public GameObject arrowPrefab;
+    public GameObject ArrowPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,7 @@ public class ArrowGenerator : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            GameObject arrow = Instantiate(arrowPrefab) as GameObject;
+            GameObject arrow = Instantiate(ArrowPrefab) as GameObject;
             arrow.GetComponent<ArrowController>().Shoot(new Vector3(-60000,0,0));
         }
     }
